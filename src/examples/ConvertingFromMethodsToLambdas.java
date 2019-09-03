@@ -4,7 +4,7 @@ import java.util.function.Function;
 
 public class ConvertingFromMethodsToLambdas {
 
-	static Function<Integer, Integer> lambdaSquare = x -> x * x;
+	static Function<Integer, Integer> squareLambda = x -> x * x;
 
 	public int square(int x) {
 		return x * x;
@@ -12,7 +12,7 @@ public class ConvertingFromMethodsToLambdas {
 
 	public static void main(String[] args) {
 		 System.out.println(new ConvertingFromMethodsToLambdas().square(8));
-		 System.out.println(ConvertingFromMethodsToLambdas.lambdaSquare.apply(8));
+		 System.out.println(ConvertingFromMethodsToLambdas.squareLambda.apply(8));
 	}
 
 	// Create a variable to hold the function
@@ -22,6 +22,6 @@ public class ConvertingFromMethodsToLambdas {
 	// Add the lambda operator: ->
 
 	// If there's only one parameter, you can remove the parenthesis
-	// If the lambda is only one line of code, you can remove the "return"
+	// If the lambda is only one line of code, you can remove the "return", and the curly braces {}
 	
 }
