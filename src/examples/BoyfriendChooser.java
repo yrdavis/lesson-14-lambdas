@@ -17,11 +17,11 @@ public class BoyfriendChooser {
 		
 		Stream<Boy> streamOfBoys = boys.stream();
 		
-		Predicate<? super Boy> predicate = boy -> boy.isFunny(); 	// this is a lambda expression	
+		Predicate<Boy> predicate = boy -> boy.isFunny(); 	// this is a lambda expression	
 		
 		List<Boy> possibleBoyfriends = streamOfBoys
 				.filter(predicate)
-				.filter((Predicate<? super Boy>) boy -> boy.isEmotionallyAvailable())
+				.filter(boy -> boy.isEmotionallyAvailable())
 				.collect(Collectors.toList());
 		
 		System.out.println(possibleBoyfriends);
